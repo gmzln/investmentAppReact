@@ -1,4 +1,4 @@
-function ListHead() {
+function TableHeader() {
   return (
     <thead className="center">
       <tr>
@@ -12,4 +12,4 @@ function ListHead() {
   );
 }
 
-export default ListHead;
+export default TableHeader;
