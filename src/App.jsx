@@ -1,12 +1,12 @@
 import Header from "./Components/Header";
 import List from "./Components/Table";
-import InputGroup from "./Components/InputGroup";
+import UserInput from "./Components/UserInput";
 
 function App() {
   return (
     <>
       <Header />;
-      <InputGroup />
+      <UserInput />
       <List />
     </>
   );

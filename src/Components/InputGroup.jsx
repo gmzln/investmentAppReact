@@ -1,10 +1,10 @@
-import UserInput from "./UserInput";
+// import UserInput from "./UserInput";
 
-function InputGroup() {
-  return (
-    <div className="input-group">
-      <UserInput />
-    </div>
-  );
-}
-export default InputGroup;
+// function InputGroup() {
+//   return (
+//     <div className="input-group">
+//       <UserInput />
+//     </div>
+//   );
+// }
+// export default InputGroup;

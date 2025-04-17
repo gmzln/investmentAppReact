@@ -1,6 +1,6 @@
 function TableHeader() {
   return (
-    <thead className="center">
+    <thead>
       <tr>
         <th scope="col">Year</th>
         <th scope="col">Investment Volue</th>
