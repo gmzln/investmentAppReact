@@ -1,12 +1,22 @@
+const tableHeader = [
+  "Year",
+  "Investment Value",
+  "Interest (Year)",
+  "Total interest",
+  "invested capital",
+];
+
 function TableHeader() {
   return (
     <thead>
       <tr>
-        <th scope="col">Year</th>
-        <th scope="col">Investment Volue</th>
-        <th scope="col">Interest (Year)</th>
-        <th scope="col">Total interest</th>
-        <th scope="col">invested capital</th>
+        {tableHeader.map((header, index) => {
+          return (
+            <th key={index} scope="col">
+              {header}
+            </th>
+          );
+        })}
       </tr>
     </thead>
   );

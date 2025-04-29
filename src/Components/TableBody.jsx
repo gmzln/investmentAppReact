@@ -1,12 +1,26 @@
-function TableBody({ count, investmentValue, year, totalInterest, capital }) {
+import { calculateInvestmentResults } from "../util/investment";
+
+function TableBody({
+  initialInvestment,
+  annualInvestment,
+  expectedReturn,
+  duration,
+}) {
+  const investmentResults = calculateInvestmentResults(
+    initialInvestment,
+    annualInvestment,
+    expectedReturn,
+    duration
+  );
+
   return (
     <tbody>
       <tr>
-        <th scope="row">{count}</th>
-        <td>{investmentValue}</td>
-        <td>{year}</td>
-        <td>{totalInterest}</td>
-        <td>{capital}</td>
+        <td></td>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   );

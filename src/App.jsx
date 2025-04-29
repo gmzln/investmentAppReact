@@ -1,13 +1,15 @@
 import Header from "./Components/Header";
+import InputGroup from "./Components/InputGroup";
 import List from "./Components/Table";
-import UserInput from "./Components/UserInput";
+import TableBody from "./Components/TableBody";
 
 function App() {
   return (
     <>
       <Header />;
-      <UserInput />
+      <InputGroup />
       <List />
+      <TableBody />
     </>
   );
 }
