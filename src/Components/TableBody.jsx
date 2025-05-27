@@ -13,15 +13,23 @@ function TableBody({
     duration
   );
 
+  let totalInterest = 0;
+
   return (
     <tbody>
-      <tr>
-        <td></td>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+      {investmentResults.map((data) => {
+        totalInterest += data.interest;
+
+        return (
+          <tr key={data.year}>
+            <td>{data.year}</td>
+            <td>{data.valueEndOfYear}</td>
+            <td>{data.interest}</td>
+            <td>{totalInterest}</td>
+            <td>{data.annualInvestment}</td>
+          </tr>
+        );
+      })}
     </tbody>
   );
 }

@@ -1,16 +1,8 @@
-const tableHeader = [
-  "Year",
-  "Investment Value",
-  "Interest (Year)",
-  "Total interest",
-  "invested capital",
-];
-
-function TableHeader() {
+function TableHeader({ inputTitle }) {
   return (
     <thead>
       <tr>
-        {tableHeader.map((header, index) => {
+        {inputTitle.map((header, index) => {
           return (
             <th key={index} scope="col">
               {header}
