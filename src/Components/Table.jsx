@@ -1,11 +1,11 @@
 import TableBody from "./TableBody";
 import TableHeader from "./TableHeader";
 
-function Table() {
+function Table({ investmentResults }) {
   return (
     <table id="result">
       <TableHeader />
-      <TableBody />
+      <TableBody investmentResults={investmentResults} />
     </table>
   );
 }

@@ -1,8 +1,8 @@
 import Header from "./Components/Header";
 import InputGroup from "./Components/InputGroup";
 import List from "./Components/Table";
-import TableBody from "./Components/TableBody";
-import TableHeader from "./Components/TableHeader";
+import { useState } from "react";
+import { calculateInvestmentResults } from "./util/investment";
 
 const inputFields = [
   { label: "Initial Investment", key: "initialInvestment" },
@@ -19,23 +19,24 @@ function App() {
     duration: 10,
   });
 
+  const investmentResults = calculateInvestmentResults(inputValue);
+
   function onChange(event, key) {
     setInputValue((prevInput) => ({
       ...prevInput,
       [key]: +event.target.value,
     }));
   }
+
   return (
     <>
-      <Header />;
+      <Header />
       <InputGroup
         inputValue={inputValue}
         onChange={onChange}
         inputFields={inputFields}
       />
-      <List />
-      <TableHeader inputTitle={inputFields[key]} />
-      <TableBody />
+      <List investmentResults={investmentResults} />
     </>
   );
 }

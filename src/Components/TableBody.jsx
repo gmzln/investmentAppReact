@@ -1,18 +1,4 @@
-import { calculateInvestmentResults } from "../util/investment";
-
-function TableBody({
-  initialInvestment,
-  annualInvestment,
-  expectedReturn,
-  duration,
-}) {
-  const investmentResults = calculateInvestmentResults(
-    initialInvestment,
-    annualInvestment,
-    expectedReturn,
-    duration
-  );
-
+function TableBody({ investmentResults }) {
   let totalInterest = 0;
 
   return (

@@ -1,14 +1,20 @@
-function TableHeader({ inputTitle }) {
+function TableHeader() {
+  const titles = [
+    "Year",
+    "Investment Value",
+    "Interest(Year)",
+    "Total Interest",
+    "Invested Capital",
+  ];
+
   return (
     <thead>
       <tr>
-        {inputTitle.map((header, index) => {
-          return (
-            <th key={index} scope="col">
-              {header}
-            </th>
-          );
-        })}
+        {titles.map((title, index) => (
+          <th key={index} scope="col">
+            {title}
+          </th>
+        ))}
       </tr>
     </thead>
   );
